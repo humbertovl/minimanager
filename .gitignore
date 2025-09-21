@@ -209,3 +209,9 @@ __marimo__/
 
 # Ignore local settings
 local.py
+
+# Ignores until a stable version
+# static/
+# !static/.gitkeep
+# site_app/migrations/
+# !site_app/migrations/__init__.py

@@ -11,10 +11,10 @@ WSGI_APPLICATION = 'site_hub.wsgi.application'
 ROOT_URLCONF = 'site_hub.urls'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
 ]
 
-AUTH_USER_MODEL = "site_app.User"
+AUTH_USER_MODEL = 'site_app.User'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES: dict[str, Any] = {}
 
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'site_app',
 ]
 
 MIDDLEWARE = [
