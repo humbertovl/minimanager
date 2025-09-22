@@ -19,7 +19,9 @@ exclude = [
     "site_hub/base_settings.py",
     "site_hub/production_settings.py",
     "site_hub/local_settings.py",
+    "site_hub/test_settings.py",
     "local.py",
+    "test.py",
     "manage.py",
     "__init__.py"
 ]

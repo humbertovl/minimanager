@@ -17,6 +17,7 @@ STATICFILES_DIRS = [
 AUTH_USER_MODEL = 'site_app.User'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES: dict[str, Any] = {}
+APP_SEEDER_MODULE_NAME = 'example_seeder'
 
 USE_I18N = True
 USE_TZ = True
