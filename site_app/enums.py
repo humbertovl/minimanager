@@ -1,10 +1,10 @@
 from enum import auto
 
-from django.db import models
+from django.db.models import IntegerChoices
 from django.utils.translation import gettext_lazy as _
 
 
-class CurrencyKind(models.IntegerChoices):
+class CurrencyKind(IntegerChoices):
     # Government/country issued currency
     FIAT = auto(), _('Fiat')
     # Digital points with a stable equivalence to fiat
@@ -17,3 +17,7 @@ class CurrencyKind(models.IntegerChoices):
     CRYPTO_UNITS = auto(), _('Crypto')
     # Resource exchangable for money
     COMMODITY_UNITS = auto(), _('Commodity')
+
+class AccountKind(IntegerChoices):
+    ASSET = auto(), _('Asset')
+    LIABILITY = auto(), _('Liability')

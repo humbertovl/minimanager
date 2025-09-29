@@ -1,6 +1,9 @@
+from decimal import Decimal
 from typing import ClassVar
 
 from django.db import models
+
+from site_app.enums import AccountKind
 
 from .currency import Currency
 
@@ -26,6 +29,17 @@ class Account(models.Model):
     currency = models.ForeignKey(
         to=Currency,
         on_delete=models.PROTECT,
+    )
+    kind = models.PositiveSmallIntegerField(
+        'Account type',
+        choices=AccountKind, # type: ignore
+        default=AccountKind.ASSET
+    )
+    balance = models.DecimalField(
+        'Balance',
+        max_digits=18,
+        decimal_places=8,
+        default=Decimal('0'),
     )
 
     objects = AccountManager()

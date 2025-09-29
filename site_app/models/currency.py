@@ -14,6 +14,8 @@ class Currency(models.Model):
     name = models.CharField(
         'Name',
         max_length=20,
+        blank=False,
+        null=False,
     )
     label = models.CharField(
         'Label',
@@ -21,7 +23,8 @@ class Currency(models.Model):
     )
     kind = models.PositiveSmallIntegerField(
         'Currency type',
-        choices=CurrencyKind,
+        choices=CurrencyKind, # type: ignore
+        default=CurrencyKind.FIAT
     )
 
     # Managers
